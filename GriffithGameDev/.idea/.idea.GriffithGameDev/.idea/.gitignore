@@ -86,3 +86,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# GitHub Copilot persisted chat sessions
+/copilot/chatSessions
