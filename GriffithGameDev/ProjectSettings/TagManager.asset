@@ -7,14 +7,15 @@ TagManager:
   - GameManager
   - Start
   - Checkpoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - GroundDetector
   - 
   - 
   - 

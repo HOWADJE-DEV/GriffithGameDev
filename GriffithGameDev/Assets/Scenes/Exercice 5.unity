@@ -5069,7 +5069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358465341887733913, guid: 97ec2d4f7892258459038b0074009143, type: 3}
       propertyPath: jumpForce
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5358465341887733913, guid: 97ec2d4f7892258459038b0074009143, type: 3}
       propertyPath: gameManager
@@ -5081,7 +5081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358465341887733913, guid: 97ec2d4f7892258459038b0074009143, type: 3}
       propertyPath: secondaryJumpForce
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5602869866326687196, guid: 97ec2d4f7892258459038b0074009143, type: 3}
       propertyPath: m_Name

@@ -22,6 +22,7 @@ public class CheckPointScript : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>().spawnPoint = transform;
+            gameObject.GetComponent<Animator>().SetTrigger("CheckPointTriggered");
         }
     }
 }
