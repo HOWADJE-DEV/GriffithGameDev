@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour
     public float health;
     public float score;
     public Transform spawnPoint;
+    public int deathCount;
     
     private void Awake()
     {

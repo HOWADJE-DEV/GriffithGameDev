@@ -25,12 +25,15 @@ public class FG_CharacterController : MonoBehaviour
     // GameManager object
     public GameManagerScript gameManager;
 
+    AudioManagerScript audioManager;
+    
     // Start is called before the first frame update
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>(); // look for a component called Rigidbody2D and assign it to myRb
         anim = GetComponentInChildren<Animator>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerScript>();
     }
 
     // Update is called once per frame
@@ -79,6 +82,17 @@ public class FG_CharacterController : MonoBehaviour
         {
             myRb.AddForce(new Vector2(0, secondaryJumpForce), ForceMode2D.Force);
         }
+        // Check if the "E" key or the attack button is pressed
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("ScoreConverter"))
+        {
+            // Check if the player's score is at least 50
+            if (gameManager.score >= 50)
+            {
+                // Subtract 50 from the score and add 1 to the health
+                gameManager.score -= 50;
+                gameManager.health += 1;
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other) 
@@ -109,6 +123,8 @@ public class FG_CharacterController : MonoBehaviour
     {
         if (!canTakeDamage)
             return;
+        // Play the hit sound
+        audioManager.PlaySFX(audioManager.hit);
         if (gameManager.health > 0)
             gameManager.health -= damage;
         if (gameManager.health <= 0)
@@ -129,5 +145,6 @@ public class FG_CharacterController : MonoBehaviour
         // Find the GameManagerScript and move the player to the spawn point
         transform.position = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>().spawnPoint.position;
         gameManager.health = 3;
+        gameManager.deathCount++;
     }
 }

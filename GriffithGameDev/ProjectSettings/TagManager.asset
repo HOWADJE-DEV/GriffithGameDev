@@ -8,6 +8,7 @@ TagManager:
   - Start
   - Checkpoint
   - Enemy
+  - Audio
   layers:
   - Default
   - TransparentFX

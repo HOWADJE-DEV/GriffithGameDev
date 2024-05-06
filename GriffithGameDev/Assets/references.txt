@@ -1,0 +1,26 @@
+Exercices :
+
+1) Create a physics playground in Unity
+
+2) Create a 2D player controller
+
+3) Create a Tilemap level in Unity that the player can move around in, and has at least one effector e.g. the platform effector
+
+4) Create a GameManager, checkpoint and respawn system, traps and a simple UI. Update the player so it has a jump and fall animation.
+
+5) Create a simple enemy with simple enemy AI and states. Detect whether the player is left or right of the enemy gameobject, then move toward the player. The enemy should do damage to the player on collision. If no player is detected, either stay idle or patrol left and right (You can set it up so that the enemy moves between patrol points OR uses a collision and groundcheck to move left/right until it hits a wall or detects a cliff). - For bonus points, set up the Animator so that the correct animations play 
+
+6) Create a 3D level using e.g. Probuilder and set up a Navmesh so an enemy chases the player, and the player can be moved via mouse click
+
+7) Set up animations for the 3D player and enemy, as well as patrol points for the enemy when it is not chasing the player
+
+8) Create a simple shader in Shader Graph - Bonus points create a simple sequence/cutscene using Timeline, and with postprocessing effects in the scene
+
+Assets from :
+
+https://pixelfrog-assets.itch.io/pixel-adventure-1
+https://pixelfrog-assets.itch.io/pixel-adventure-2
+
+https://mixkit.co/free-sound-effects/game/?page=2
+
+Nier Automata OST ("Hacking Theme", Song of the Ancients, Atonement)

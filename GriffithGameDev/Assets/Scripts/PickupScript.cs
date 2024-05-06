@@ -9,10 +9,12 @@ public class PickupScript : MonoBehaviour
     public GameManagerScript gameManager;
 
     public GameObject collectedEffect;
+    AudioManagerScript audioManager;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerScript>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class PickupScript : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             gameManager.AddScore(scoreValue);
+            audioManager.PlaySFX(audioManager.bonus);
             Instantiate(collectedEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }

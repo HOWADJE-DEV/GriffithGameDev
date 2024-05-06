@@ -21,7 +21,7 @@ public class SpikeScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.GetComponent<CharacterControllerScript>().TakeDamage(damage);
+            col.GetComponent<FG_CharacterController>().TakeDamage(damage);
         }
     }
     
@@ -29,7 +29,7 @@ public class SpikeScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<CharacterControllerScript>().TakeDamage(damage);
+            col.gameObject.GetComponent<FG_CharacterController>().TakeDamage(damage);
         }
     }
     
@@ -37,7 +37,7 @@ public class SpikeScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<CharacterControllerScript>().TakeDamage(damage);
+            col.gameObject.GetComponent<FG_CharacterController>().TakeDamage(damage);
         }
     }
 }
